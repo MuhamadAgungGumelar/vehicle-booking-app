@@ -1,11 +1,13 @@
-
 # TECHNICAL TEST - Fullstack Developer - PT. Sekawan Media (Aplikasi Pemesanan Kendaraan)
 
 ## Description Test
+
 Sebuah perusahaan tambang nikel membutuhkan sebuah aplikasi web untuk memonitoring kendaraan perusahaan. Aplikasi ini memungkinkan admin untuk menginput pemesanan kendaraan, menentukan driver, dan pihak yang menyetujui pemesanan. Persetujuan dilakukan berjenjang minimal dua level dan pihak yang menyetujui dapat melakukan persetujuan melalui aplikasi. Terdapat juga dashboard untuk menampilkan grafik pemakaian kendaraan dan laporan periodik pemesanan kendaraan yang dapat di-export dalam format Excel.
 
 ## Fitur Utama
+
 ### 1. Manajemen Pengguna:
+
 Admin
 
 Pihak yang menyetujui (Manager)
@@ -48,7 +50,7 @@ Excel Export: Laravel Excel
 
 ### 1. Clone Repository
 
-    git clone https://github.com/username/repo.git
+    git clone https://github.com/MuhamadAgungGumelar/vehicle-booking-app
 
 ### 2. Install Dependencies
 
@@ -57,6 +59,7 @@ Excel Export: Laravel Excel
     npm run dev
 
 ### 3. Setup Environment
+
 Atur konfigurasi database postgresql dan mail yang digunakan sesuai environment yang dimiliki pada file .env
 
     DB_CONNECTION=pgsql
@@ -76,17 +79,21 @@ Atur konfigurasi database postgresql dan mail yang digunakan sesuai environment 
     MAIL_FROM_NAME=(sesuaikan dengan nama mailtrap yang dimiliki)
 
 ### 4. Migrasi Database
+
     php artisan migrate
 
 ### 5. Seed Database
+
 Catatan: Jika ingin generate data dummy untuk database, lakukan seeding database
 
     php artisan db:seed
 
 ### 6. Menjalankan Aplikasi
+
     php artisan serve
 
 ## Pengguna Awal
+
 Catatan: Buat akun menggunakan fitur registrasi yang sudah disediakan. Akun pertama kali akan otomatis menjadi role employee, sehingga jika ingin mengubah role, harap ubah di dalam database untuk menjadi role admin atau manager.
 
     Admin:
@@ -98,31 +105,38 @@ Catatan: Buat akun menggunakan fitur registrasi yang sudah disediakan. Akun pert
     Password: superuser
 
 ## Penggunaan
+
 ### 1. Login
+
 Masuk ke aplikasi menggunakan kredensial di atas.
 
 ### 2. Pemesanan Kendaraan
+
 Admin dapat menginput pemesanan kendaraan melalui halaman pemesanan atau navbar booking.
 
 ### 3. Persetujuan
+
 Manager dapat menyetujui atau menolak pemesanan kendaraan melalui halaman persetujuan atau navbar Approval.
 
 ### 4. Dashboard
+
 Semua Role dapat melihat grafik pemakaian kendaraan di dashboard atau navbar dashboard
 
 ### 5. Laporan Periodik
+
 Admin dapat mengekspor laporan pemesanan kendaraan dalam format Excel dari halaman pemesanan atau navbar booking.
 
 ### 6. Log
+
 Semua Role dapat melihat aktivitas yang dilakukan user pada aplikasi di halaman log atau navbar log
 
 ## Physical Data Model
+
 Berikut adalah Physical Data Model yang digunakan dalam aplikasi ini:
 ![Screenshot 2024-07-21 100931](https://github.com/user-attachments/assets/cc1a0452-2986-4204-97b5-96f8140cc4d4)
 
-
-
 ## Activity Diagram
+
 Berikut adalah Activity Diagram untuk fitur pemesanan kendaraan:
 
     +------------------------------------------------------------+
@@ -149,7 +163,6 @@ Berikut adalah Activity Diagram untuk fitur pemesanan kendaraan:
             |                             |                    |
             v                             |                    v
         Selesai                       Selesai              Selesai
-
 
 ## Demo
 
